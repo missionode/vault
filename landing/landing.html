@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Project Management App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h1 class="text-2xl font-bold text-center mb-6">Welcome!</h1>
+
+        <div id="password-setup-section">
+            <p class="text-center text-gray-600 mb-4">Please create a secure password to get started.</p>
+            <div class="mb-4">
+                <label for="password" class="block text-gray-700 text-sm font-bold mb-2">New Password:</label>
+                <input type="password" id="password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter your password">
+            </div>
+            <div class="mb-6">
+                <label for="confirm-password" class="block text-gray-700 text-sm font-bold mb-2">Confirm Password:</label>
+                <input type="password" id="confirm-password" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Confirm your password">
+            </div>
+            <button id="set-password-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">Set Password</button>
+            <p id="password-error" class="text-red-500 text-xs italic mt-2 hidden">Passwords do not match or are too short.</p>
+        </div>
+
+        <div id="data-management-section" class="hidden">
+            <p class="text-center text-gray-600 mb-4">Manage your project data.</p>
+            <button id="download-backup-btn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full mb-3">Download Backup</button>
+            <button id="restore-data-btn" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">Restore Data</button>
+        </div>
+        <div class="restore">
+            <a style="margin-top: 50px;display: inline-flex; justify-content: center;" href="../restore/restore.html">Restore data</a>
+            <p></p>
+
+        </div>
+    </div>
+
+    <script src="landing.js"></script>
+</body>
+</html>

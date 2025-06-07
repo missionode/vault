@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Face ID</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.2.0/dist/tf.min.js"></script>
+    <script src="https://unpkg.com/@vladmandic/face-api@latest/dist/face-api.js"></script>
+    <link rel="stylesheet" href="updateface.css"> 
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md text-center">
+        <h1 class="text-2xl font-bold mb-6">Update Your Face ID</h1>
+        <p class="text-gray-600 mb-4">
+            To update your Face ID, please enter your project password below,
+            then position your face clearly in front of the camera.
+        </p>
+
+        <div class="mb-4">
+            <label for="master-password-input" class="block text-gray-700 text-sm font-bold mb-2 text-left">
+                Project Password:
+            </label>
+            <input type="password" id="master-password-input" 
+                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" 
+                   placeholder="Enter project password">
+        </div>
+
+        <video id="video-feed" class="w-full rounded-lg border-2 border-gray-300 bg-gray-200 mt-4" autoplay muted></video>
+
+        <p id="status-message" class="mt-4 text-lg font-semibold text-gray-700">Loading camera and models...</p>
+
+        <button id="update-face-btn" 
+                class="mt-6 bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded 
+                       focus:outline-none focus:shadow-outline w-full opacity-50 cursor-not-allowed" 
+                disabled>
+            Verify Password & Update Face
+        </button>
+    </div>
+
+    <script src="updateface.js"></script>
+</body>
+</html>

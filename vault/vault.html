@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vault - Project Management App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="vault.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-2xl">
+        <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Your Secure Vault</h1>
+
+        <p id="vault-content-message" class="text-gray-700 text-lg mb-8 text-center">
+            Welcome to your secure vault! Session expires in: <span id="countdown-timer" class="font-bold text-red-600"></span>
+        </p>
+        <div class="mb-8 p-6 bg-blue-50 border-l-4 border-blue-500 rounded-lg">
+            <h2 class="text-xl font-semibold mb-4 text-blue-700">Add New Password</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div>
+                    <label for="new-password-name" class="block text-gray-700 text-sm font-bold mb-2">Password Name:</label>
+                    <input type="text" id="new-password-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="e.g., Gmail, Bank Account">
+                </div>
+                <div>
+                    <label for="new-password-value" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
+                    <input type="password" id="new-password-value" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Enter password">
+                </div>
+            </div>
+            <button id="add-password-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
+                Add Password
+            </button>
+        </div>
+
+        <div class="mb-8 p-6 bg-gray-50 border-l-4 border-gray-300 rounded-lg">
+            <h2 class="text-xl font-semibold mb-4 text-gray-700">Search Passwords</h2>
+            <input type="text" id="search-input" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Search by name or password...">
+        </div>
+
+        <div class="bg-green-50 border-l-4 border-green-500 rounded-lg p-6">
+            <h2 class="text-xl font-semibold mb-4 text-green-700">Your Stored Passwords</h2>
+            <ul id="password-list" class="space-y-4">
+                <li class="text-center text-gray-500">No passwords stored yet.</li>
+            </ul>
+        </div>
+        
+        <button id="logout-btn" class="mt-8 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full">
+            Logout
+        </button>
+        <a style="margin-top: 50px;display: inline-flex; justify-content: center;" href="../backup/backup.html">Backup data</a>
+    </div>
+
+    <div id="edit-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 hidden">
+        <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
+            <h2 class="text-2xl font-bold mb-6 text-center">Edit Password</h2>
+            <input type="hidden" id="edit-password-id">
+            <div class="mb-4">
+                <label for="edit-password-name" class="block text-gray-700 text-sm font-bold mb-2">Name:</label>
+                <input type="text" id="edit-password-name" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-6">
+                <label for="edit-password-value" class="block text-gray-700 text-sm font-bold mb-2">Password:</label>
+                <input type="text" id="edit-password-value" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="flex justify-end space-x-4">
+                <button id="cancel-edit-btn" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Cancel
+                </button>
+                <button id="save-edit-btn" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Save Changes
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="vault.js"></script>
+</body>
+</html>

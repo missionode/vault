@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify Face ID</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.2.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api@1.7.15/dist/face-api.js"></script>
+    <link rel="stylesheet" href="scanface.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md text-center">
+        <h1 class="text-2xl font-bold mb-6">Verify Your Face ID</h1>
+        <p class="text-gray-600 mb-4">Please position your face clearly in front of the camera for verification.</p>
+
+        <video id="video-feed" class="w-full rounded-lg border-2 border-gray-300 bg-gray-200" autoplay muted></video>
+
+        <canvas id="face-canvas" class="hidden"></canvas> 
+
+        <p id="status-message" class="mt-4 text-lg font-semibold text-gray-700">Loading camera and models...</p>
+
+        <button id="verify-face-btn" class="mt-6 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full opacity-50 cursor-not-allowed" disabled>
+            Verify Face
+        </button>
+        <a style="justify-content: center; display:flex;margin-top: 50px;" href="../updateface/updateface.html">Update Face</a>
+    </div>
+
+    <script src="scanface.js"></script>
+</body>
+</html>

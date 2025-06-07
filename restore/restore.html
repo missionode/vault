@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restore Local Storage</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="restore.css">
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md text-center">
+        <h1 class="text-2xl font-bold mb-6">Restore Your Data</h1>
+        <p class="text-gray-600 mb-4">
+            Select a previously downloaded backup (.json) file to restore your application's data.
+        </p>
+
+        <div class="mb-6">
+            <label for="backup-file-input" class="block text-gray-700 text-sm font-bold mb-2 text-left">
+                Choose Backup File:
+            </label>
+            <input type="file" id="backup-file-input" accept=".json"
+                   class="block w-full text-sm text-gray-500
+                          file:mr-4 file:py-2 file:px-4
+                          file:rounded-full file:border-0
+                          file:text-sm file:font-semibold
+                          file:bg-blue-50 file:text-blue-700
+                          hover:file:bg-blue-100"/>
+        </div>
+
+        <button id="restore-btn" 
+                class="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded 
+                       focus:outline-none focus:shadow-outline w-full"
+                       disabled>
+            Restore Data from Backup
+        </button>
+
+        <p id="status-message" class="mt-4 text-sm text-gray-500"></p>
+
+        <p class="mt-8 text-gray-500 text-xs">
+            **Warning:** Restoring will overwrite existing application data.
+            Ensure you are using a trusted backup file.
+        </p>
+    </div>
+
+    <script src="restore.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* createfaceid.css */
+
+/*
+  This file provides any custom styles not covered by Tailwind.
+  For a minimalist design, most styling will be handled by Tailwind classes.
+*/
+
+/* Ensure the video element maintains aspect ratio and fills its container */
+#video-feed {
+    object-fit: cover;
+    width: 100%;
+    /* Set a reasonable height, or use JS to make it dynamic */
+    height: 300px; /* Adjust as needed */
+}

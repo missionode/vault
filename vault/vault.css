@@ -1,0 +1,30 @@
+/* vault.css */
+
+/*
+  This file is primarily for custom styles that are not easily
+  achieved with Tailwind CSS classes or for overrides.
+*/
+
+/* Custom focus styles for input elements for better UX */
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* A blue focus ring */
+    border-color: transparent; /* Remove default border */
+}
+
+/* Style for the password list items */
+#password-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    border-left: 4px solid #60a5fa; /* A subtle blue border */
+}
+
+/* Style for the password text to prevent accidental selection/copy if desired */
+/* .password-text {
+    user-select: none;
+} */
