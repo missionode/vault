@@ -17,7 +17,7 @@ async function initializeScanFacePage() {
     let modelsLoaded = false;
 
     // Define the path to your models folder
-    const MODEL_URL = '/models'; 
+    const MODEL_URL = '/vault/models'; 
 
     /**
      * Loads face-api.js models.
