@@ -14,7 +14,7 @@ async function initializeFaceIDPage() { // Changed to async as model loading is 
 
     // Define the path to your models folder
     // Make sure you have downloaded the models and placed them in a 'models' folder at your project root.
-    const MODEL_URL = '/models'; 
+    const MODEL_URL = '/vault/models'; 
 
     /**
      * Loads face-api.js models.
