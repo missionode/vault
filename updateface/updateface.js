@@ -15,7 +15,7 @@ async function initializeUpdateFacePage() {
     let modelsLoaded = false;
 
     // Define the path to your models folder (must be at the project root)
-    const MODEL_URL = '/models'; 
+    const MODEL_URL = '/vault/models'; 
 
     /**
      * Loads face-api.js models.
